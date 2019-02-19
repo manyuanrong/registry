@@ -27,6 +27,10 @@
     "url": "https://raw.githubusercontent.com/denoland/deno/${b}",
     "repo": "https://github.com/denoland/deno"
   },
+  "crypto": {
+    "url": "https://raw.githubusercontent.com/manyuanrong/deno-crypto/${b}",
+    "repo": "https://github.com/manyuanrong/deno-crypto"
+  },
   "datetime": {
     "url": "https://raw.githubusercontent.com/denoland/deno_std/${b}/datetime/",
     "repo": "https://github.com/denoland/deno_std/tree/master/datetime"
