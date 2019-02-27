@@ -8,127 +8,65 @@ const homepageHTML = /* HTML */ `
   <html lang="en">
     <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-      <title>Deno modules</title>
-      <meta
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-        name="viewport"
+      <title>Deno Modules</title>
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/default.min.css"
       />
-      <style>
-        body {
-          color: #111;
-          background: #f0f0f0;
-          margin: 80px 0;
-          font-family: Arial;
-          font-size: 20px;
-        }
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/styles/github-gist.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/highlight.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.14.2/build/languages/typescript.min.js"></script>
 
-        main {
-          max-width: 800px;
-          margin: 0px auto;
-          padding: 0 10px;
-        }
+      <link rel="stylesheet" href="https://deno.land/style.css" />
 
-        svg {
-          margin: 0px auto;
-        }
-
-        a {
-          color: #333;
-        }
-
-        p {
-          line-height: 1.5;
-          font-size: 0.9em;
-        }
-
-        .modules li {
-          font-size: 0.9em;
-          margin-bottom: 20px;
-        }
-
-        .modules code {
-          -webkit-user-select: all;
-          -moz-user-select: all;
-          -ms-user-select: all;
-          user-select: all;
-        }
-
-        pre {
-          background: #ddd;
-          padding: 15px;
-          word-wrap: normal;
-          overflow-x: auto;
-        }
-
-        code {
-          background: #ddd;
-          padding: 4px 8px;
-        }
-
-        a:hover {
-          color: #488;
-        }
-
-        a[href^="#"] {
-          /* Hash links */
-          text-decoration: none;
-          color: #3bace5;
-          margin-right: 0.5rem;
-        }
-        a[href^="#"]:hover {
-          text-decoration: underline;
-          color: #3d9bcc;
-        }
-
-        table {
-          border-collapse: collapse;
-          border-spacing: 0;
-        }
-
-        td,
-        th {
-          text-align: center;
-          vertical-align: middle;
-          border: 1px solid #aaa;
-          padding: 6px;
-        }
-
-        @media only screen and (max-device-width: 480px) {
-          body {
-            margin: 10px 0;
-          }
-        }
-      </style>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     </head>
     <body>
       <main>
         <img src="${LOGO_PATH}" width="150px" />
         <h1>Deno Modules</h1>
+
         <p>This is a URL redirection service for Deno scripts.</p>
+
         <p>
           The basic format is
           <code>https://deno.land/x/MODULE_NAME@BRANCH/SCRIPT.ts</code>. If you
           leave out the branch, it will default to master.
         </p>
+        <h2>Standard</h2>
 
-        <h2 id="modules"><a href="#modules">#</a>Modules</h2>
+        <ul class="modules">
+          <li>
+            <code>https://deno.land/std/</code>
+            <a href="https://github.com/denoland/deno_std">repo</a>
+          </li>
+
+          <li>
+            <code>https://deno.land/core/</code>
+            <a href="https://github.com/denoland/deno">repo</a>
+          </li>
+        </ul>
+
+        <h2 id="modules">Third Party</h2>
 
         <ul class="modules">
           ${
             Object.entries(DATABASE)
               .sort(([nameA], [nameB]) => nameA.localeCompare(nameB))
-              .map(
-                ([name, { repo }]) =>
-                  `<li><code>https://deno.land/x/<b>${name}</b>/</code> — <a href="${repo}">Repo</a></li>`
-              )
+              .map(([name, { repo }]) => {
+                const link = `https://deno.land/x/${name}/`;
+                return `<li><a href=${link}>${link}</a> — <a href="${repo}">Repo</a></li>`;
+              })
               .join("\n")
           }
         </ul>
 
         <br />
-        <h2 id="contributing"><a href="#contributing">#</a>Contributing</h2>
+        <h2 id="contributing">Contributing</h2>
 
         <p>
           To add a module send a pull request to
