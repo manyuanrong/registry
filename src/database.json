@@ -23,6 +23,10 @@
     "url": "https://raw.githubusercontent.com/manyuanrong/bytes_formater/${b}/",
     "repo": "https://github.com/manyuanrong/bytes_formater"
   },
+  "case": {
+    "url": "https://raw.githubusercontent.com/justjavac/deno-change-case/${b}/",
+    "repo": "https://github.com/justjavac/deno-change-case"
+  },
   "case_style": {
     "url": "https://raw.githubusercontent.com/zekth/deno_case_style/${b}/",
     "repo": "https://github.com/zekth/deno_case_style"
@@ -40,7 +44,7 @@
     "repo": "https://github.com/hayd/deno-collections"
   },
   "core": {
-    "url": "https://raw.githubusercontent.com/denoland/deno/${b}",
+    "url": "https://raw.githubusercontent.com/denoland/deno/${b}/",
     "repo": "https://github.com/denoland/deno"
   },
   "checksum": {
@@ -52,15 +56,15 @@
     "repo": "https://github.com/allain/deno-databatcher"
   },
   "debuglog": {
-    "url": "https://raw.githubusercontent.com/rista404/deno-debug/${b}",
+    "url": "https://raw.githubusercontent.com/rista404/deno-debug/${b}/",
     "repo": "https://github.com/rista404/deno-debug"
   },
   "dedupe": {
-    "url": "https://raw.githubusercontent.com/Sab94/dedupe/${b}",
+    "url": "https://raw.githubusercontent.com/Sab94/dedupe/${b}/",
     "repo": "https://github.com/Sab94/dedupe"
   },
   "deno": {
-    "url": "https://raw.githubusercontent.com/denoland/deno/${b}",
+    "url": "https://raw.githubusercontent.com/denoland/deno/${b}/",
     "repo": "https://github.com/denoland/deno"
   },
   "deno_init": {
